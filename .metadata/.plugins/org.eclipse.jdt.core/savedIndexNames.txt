@@ -1,0 +1,8 @@
+INDEX VERSION 1.131+/home/finn/eclipse-workspace/.metadata/.plugins/org.eclipse.jdt.core
+3645057816.index
+3662816967.index
+595113772.index
+4224550576.index
+3764238034.index
+2121125280.index
+2019638205.index

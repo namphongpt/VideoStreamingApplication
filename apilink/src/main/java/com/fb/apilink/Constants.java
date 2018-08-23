@@ -1,0 +1,24 @@
+package com.fb.apilink;
+
+import com.restfb.DefaultFacebookClient;
+import com.restfb.FacebookClient;
+import com.restfb.Parameter;
+import com.restfb.Version;
+import com.restfb.types.LiveVideo;
+import com.restfb.types.User;
+
+
+public class Constants {		
+		public static void main(String[] args){
+			
+	
+			//Extended Facebook Access Tokens can be obtained via following the tutorial at: https://smashballoon.com/custom-facebook-feed/docs/get-extended-facebook-user-access-token/
+			FacebookClient facebookClient= new DefaultFacebookClient(FACEBOOK_ACCESS_TOKEN, Version.VERSION_2_9);
+	         
+			//Get user data
+	        User user = facebookClient.fetchObject("me", User.class, Parameter.with("fields","email,name,first_name,last_name,gender,website,birthday,hometown,location,about,link,locale,relationship_status,interested_in"));
+	        
+	        //Print user data
+	        System.out.println("User="+ user); 
+		}
+}

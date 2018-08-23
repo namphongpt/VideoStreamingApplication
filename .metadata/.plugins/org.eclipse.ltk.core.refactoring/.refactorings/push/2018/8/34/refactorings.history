@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;come.grabyo.wowza&apos; to &apos;com.grabyo.wowza&apos;&#x0A;- Original project: &apos;push&apos;&#x0A;- Original element: &apos;push/src/come.grabyo.wowza&apos;&#x0A;- Renamed element: &apos;push/src/com.grabyo.wowza&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;come.grabyo.wowza&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;come.grabyo.wowza" name="com.grabyo.wowza" qualified="false" references="true" stamp="1535030683103" textual="false" version="1.0"/>
+</session>

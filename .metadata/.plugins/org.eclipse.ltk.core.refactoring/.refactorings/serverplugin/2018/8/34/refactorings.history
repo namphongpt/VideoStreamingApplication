@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.grabyo.wowza.server.serverplugin&apos; to &apos;com.grabyo.wowza.server&apos;&#x0A;- Original project: &apos;serverplugin&apos;&#x0A;- Original element: &apos;serverplugin/src/com.grabyo.wowza.server.serverplugin&apos;&#x0A;- Renamed element: &apos;serverplugin/src/com.grabyo.wowza.server&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.grabyo.wowza.server.serverplugin&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;com.grabyo.wowza.server.serverplugin" name="com.grabyo.wowza.server" qualified="false" references="true" stamp="1534979111776" textual="false" version="1.0"/>
+</session>

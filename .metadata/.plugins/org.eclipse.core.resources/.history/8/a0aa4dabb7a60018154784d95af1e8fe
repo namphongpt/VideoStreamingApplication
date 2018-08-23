@@ -1,0 +1,35 @@
+package com.fb.apilink;
+
+import com.restfb.DefaultFacebookClient;
+import com.restfb.FacebookClient;
+import com.restfb.FacebookClient.AccessToken;
+import com.restfb.types.User;
+
+public class Constants {
+	
+	   public static final String REDIRECT_URI
+       = "http://localhost:8080/facebookfriends/FriendsListServlet";
+
+		
+		public static final String MY_ACCESS_TOKEN = "EAADMNyWGfY4BAMAepFb8vtz1eAMZCC7islFx3jIbjEUaAUuRKRD6gOUiDhextIt9MYb2x5fpcMXQqFwi0J8SYGYHGwXt21MTEcpoMNdoJJTIRK3nyt5ZBvgU8rJ1N8kmZBgobbTAg86VQaM6YUnqcIaZAyEpeWZApPuDyNXebAAgfusF1lALsEgYBYRkVxh0ZD";
+		
+		// Facebook App
+		public static final String MY_APP_ID = "<your app id>";
+		public static final String MY_APP_SECRET = "<your app secret>";
+		
+		public static void main(String[] args){
+			
+			AccessToken EXT_ACCESS_TOKEN = new DefaultFacebookClient().obtainExtendedAccessToken("224537224838542",
+					   "d1453f7eadd00823c941377fef6b945b", "EAADMNyWGfY4BAN2QqaXIMq03Azc6zKXP5T0UJpEzgsIa2m9EvC7N0sN54Oih7RqRfZBkAZCsh3JCZA1Rm1OYdK3gcMlh3y2gZCLsIbZCnXqBkmh3ZBc0kcBlowl5cuwQeWDLczVTCPSDHZBcnrFczw9x5xXZC85z2RIaJovZAnRr4qNLVbKHl1HoXgZA5d5ZAqT13cZD");
+		    
+			
+			FacebookClient facebookClient= new DefaultFacebookClient("EAADMNyWGfY4BAN2QqaXIMq03Azc6zKXP5T0UJpEzgsIa2m9EvC7N0sN54Oih7RqRfZBkAZCsh3JCZA1Rm1OYdK3gcMlh3y2gZCLsIbZCnXqBkmh3ZBc0kcBlowl5cuwQeWDLczVTCPSDHZBcnrFczw9x5xXZC85z2RIaJovZAnRr4qNLVbKHl1HoXgZA5d5ZAqT13cZD", VERSION_2_5 );
+	         
+	        User user = facebookClient.fetchObject("me", User.class);
+	         
+	        System.out.println("User="+ user);
+	        System.out.println("UserName= "+ user.getUsername());
+	        System.out.println("Birthday= "+ user.getBirthday());
+	 
+		}
+}

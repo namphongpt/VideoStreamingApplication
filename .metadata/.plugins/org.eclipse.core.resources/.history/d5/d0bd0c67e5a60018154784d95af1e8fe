@@ -1,0 +1,26 @@
+package com.fb.apilink;
+
+import com.restfb.DefaultFacebookClient;
+import com.restfb.FacebookClient;
+import com.restfb.Parameter;
+import com.restfb.Version;
+import com.restfb.types.LiveVideo;
+import com.restfb.types.User;
+
+
+public class Constants {		
+		public static void main(String[] args){
+						
+			FacebookClient facebookClient= new DefaultFacebookClient("EAADMNyWGfY4BAP2lFP8vGhPn66twAiSZAT2Mrtd2jNHUAZC4d8XTpHpYx1vawsCMZAKLi1CcXsUueSgulP5AwIx5hQy75591wEgAB8ZAUFJTUiZCvUQFxj9U7muO81iz7LYHKIbQJdybj3dknyZAjXmGL74XXKiWPdDaBTLlmmhCndZA924KoGL6vIxpCNEHbMZD", Version.VERSION_2_9);
+	         
+	        User user = facebookClient.fetchObject("me", User.class, Parameter.with("fields","email,name,first_name,last_name,gender,website,birthday,hometown,location,about,link,locale,relationship_status,interested_in"));
+	        
+	        
+	        LiveVideo uservideo=new LiveVideo();
+	        
+	        LiveVideo video = new LiveVideo();
+	        System.out.println(video.getId());
+	        video.setLiveViews((long)1);
+	 
+		}
+}

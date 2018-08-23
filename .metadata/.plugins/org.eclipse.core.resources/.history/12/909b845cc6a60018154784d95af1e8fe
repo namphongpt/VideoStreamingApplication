@@ -1,0 +1,39 @@
+package com.fb.apilink;
+
+import com.restfb.DefaultFacebookClient;
+import com.restfb.FacebookClient;
+import com.restfb.FacebookClient.AccessToken;
+import com.restfb.Version;
+import com.restfb.types.LiveVideo;
+import com.restfb.types.User;
+
+
+public class Constants {
+	
+	   public static final String REDIRECT_URI
+       = "http://localhost:8080/facebookfriends/FriendsListServlet";
+
+		
+		public static final String MY_ACCESS_TOKEN = "EAADMNyWGfY4BAMAepFb8vtz1eAMZCC7islFx3jIbjEUaAUuRKRD6gOUiDhextIt9MYb2x5fpcMXQqFwi0J8SYGYHGwXt21MTEcpoMNdoJJTIRK3nyt5ZBvgU8rJ1N8kmZBgobbTAg86VQaM6YUnqcIaZAyEpeWZApPuDyNXebAAgfusF1lALsEgYBYRkVxh0ZD";
+		
+		// Facebook App
+		public static final String MY_APP_ID = "<your app id>";
+		public static final String MY_APP_SECRET = "<your app secret>";
+		
+		public static void main(String[] args){
+			
+	
+			
+			FacebookClient facebookClient= new DefaultFacebookClient("EAADMNyWGfY4BALMs3KiSWxmLPar5iLRIRgtdwX8lH5OJdzfsRbZBhb7xPDzXgoibyzsZCseQMFjZCtMnT35b3jle8CQSaaT0ZBe2yuMQNZBi2uyF55bDyK7comsKa1zpOwiG7tdE32vo2TLiKITn07wpWOH8DJvKoLV4I645AP7xZCFOcKnFeWZBYM67jCQaZAmmnZCKJxQOITQZDZD", Version.VERSION_2_9);
+	         
+	        User user = facebookClient.fetchObject("me", User.class);
+	         
+	        System.out.println("User="+ user);
+	        System.out.println("UserName= "+ user.getAbout());
+	        System.out.println("Birthday= "+ user.getBirthday());
+	        
+	        LiveVideo video = new LiveVideo();
+	        System.out.println(video.getStreamUrl());
+	 
+		}
+}
